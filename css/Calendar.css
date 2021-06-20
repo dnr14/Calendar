@@ -13,6 +13,9 @@
   font-size: 20px;
   font-weight: bold;
 }
+.container .wrapper .selectDay {
+  font-size: 0.9rem;
+}
 
 .container .wrapper .row:nth-child(1),
 .container .wrapper .row:nth-child(2) {
