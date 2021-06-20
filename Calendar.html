@@ -16,8 +16,12 @@
       <div class="row">
         <span class="year"></span>
         <span class="month"></span>
-        <button onclick="calendar.prevMonth()">이전 달</button>
-        <button onclick="calendar.nextMonth()">다음 달</button>
+        <button id="prev">이전 달</button>
+        <button id="next">다음 달</button>
+      </div>
+      <div class="row" style="font-size: .9rem;">
+        현재 선택한 날짜 :&nbsp;
+        <div id="selectDay"></div>
       </div>
       <div class="row" id="day"></div>
       <div class="row" id="date"></div>

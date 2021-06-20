@@ -26,7 +26,6 @@ class App {
   }
 
   dateDraw(startObj, endObj) {
-    console.log(1);
     this.prevDraw(startObj);
 
     for (let i = 1; i <= endObj.getDate(); i++) {
@@ -117,19 +116,40 @@ class App {
         span.isClick = false;
         span.classList.remove('click');
         this.set.delete(span.yymmdd);
+        this.selectDay();
         return e.preventDefault();
       }
 
       if (this.set.size < 2) {
+
         this.set.add(span.yymmdd);
         span.isClick = true;
         span.classList.add('click');
+        this.selectDay();
+
       } else {
-        console.log(this.set);
         alert("이미 날짜를 선택 했습니다.");
       }
+
     });
+
   }
+
+  selectDay() {
+    let array = Array.from(this.set).map(x => {
+      let str = x.split('/');
+      return new Date(str[0], parseInt(str[1]) - 1, str[2]).getTime();
+    }).sort((a, b) => a - b).map(x => {
+      let day = new Date(x).toLocaleDateString()
+      return day.slice(0, day.lastIndexOf("."));
+    }).map((x) => {
+      let aa = x.split('.');
+      return `${aa[0]}년 ${aa[1]}월 ${aa[2]}일`;
+    });
+
+    document.getElementById('selectDay').textContent = array.join(` `);
+  }
+
 
   yymmddSelector() {
     const spans = document.querySelectorAll(".date:not(.space)");
@@ -142,6 +162,7 @@ class App {
           }
         });
       });
+
     }
   }
   dateCheck() {
@@ -161,6 +182,11 @@ class App {
   }
 }
 
-const calendar = new App();
+window.onload = () => {
+  const calendar = new App();
+  document.getElementById('prev').addEventListener('click', calendar.prevMonth.bind(calendar));
+  document.getElementById('next').addEventListener('click', calendar.nextMonth.bind(calendar));
+}
+
 
 

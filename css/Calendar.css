@@ -1,5 +1,3 @@
-.container {}
-
 .container .wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -20,6 +18,7 @@
 .container .wrapper .row:nth-child(2) {
   padding: 50px 0 25px 0;
 }
+
 .container .wrapper .row:nth-child(3) {
   /* border-top: 1px solid #000; */
   /* border-right: 1px solid #000; */
@@ -30,7 +29,7 @@
   flex: 2;
 }
 
-.container .wrapper .row .year::after{
+.container .wrapper .row .year::after {
   content: "년";
 }
 .container .wrapper .row .month::after {
@@ -43,40 +42,37 @@
 }
 
 .container .wrapper .row .day:nth-child(7) {
-  color: #396EE2;
+  color: #396ee2;
 }
 
 .container .wrapper .row .day:nth-child(1) {
-  color: #D13E3E;
+  color: #d13e3e;
 }
 
-.container .wrapper .row .date, 
+.container .wrapper .row .date,
 .container .wrapper .row .date.space {
   width: calc(100% / 7);
   box-sizing: border-box;
   padding: 25px;
   margin: 2.5px 0;
   cursor: pointer;
-  /* border-top: 1px solid black; */
-  /* border-left: 1px solid black; */
-  /* border-bottom: 1px solid black; */
 }
 .container .wrapper .row .date:nth-child(7n + 7) {
-  color: #396EE2;
+  color: #396ee2;
 }
 
 .container .wrapper .row .date:nth-child(7n + 1) {
-  color: #D13E3E;
+  color: #d13e3e;
 }
 
 .container .wrapper .row .date:hover:not(.date.space) {
   background-color: #f7a103;
 }
 .container .wrapper .row .date.space {
-  color: rgba(51, 51, 51, .2);
+  color: rgba(51, 51, 51, 0.2);
 }
 .container .wrapper .row .date.today {
-  background-color: #D13E3E;
+  background-color: #d13e3e;
   color: #fff;
 }
 .container .wrapper .row .date.click {
