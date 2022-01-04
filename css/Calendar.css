@@ -1,8 +1,14 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
 .container .wrapper {
   display: flex;
   flex-wrap: wrap;
   width: 500px;
   margin: auto;
+  padding: 1rem 2rem;
+  border: 1px solid;
 }
 
 .container .wrapper .row {
@@ -20,11 +26,6 @@
 .container .wrapper .row:nth-child(1),
 .container .wrapper .row:nth-child(2) {
   padding: 50px 0 25px 0;
-}
-
-.container .wrapper .row:nth-child(3) {
-  /* border-top: 1px solid #000; */
-  /* border-right: 1px solid #000; */
 }
 
 .container .wrapper .row .month {
