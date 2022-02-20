@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/index.css">
+  <title>달력</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <div class="button_wrap">
+        <button id="prev">이전 달</button>
+        <div>
+          <span class="year"></span>
+          <span class="month"></span>
+        </div>
+        <button id="next">다음 달</button>
+      </div>
+      <div class="row selectDay">
+        <p>선택한 날짜 :&nbsp;</p>
+        <div id="selectDay"></div>
+      </div>
+      <div class="row" id="day"></div>
+      <div class="row" id="date"></div>
+    </div>
+  </div>
+</body>
+<script src="./js/index.js"></script>
+
+</html>
